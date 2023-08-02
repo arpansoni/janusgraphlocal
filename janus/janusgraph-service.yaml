@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\598073\DEVTOOLS\kompose.exe convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: janusgraph
+  name: janusgraph
+spec:
+  ports:
+    - name: "8182"
+      port: 8182
+      targetPort: 8182
+  selector:
+    io.kompose.service: janusgraph
+status:
+  loadBalancer: {}
